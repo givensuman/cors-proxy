@@ -1,0 +1,19 @@
+{
+  "name": "cors-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "apicache": "^1.6.2",
+    "cors-anywhere": "^0.4.4",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2"
+  }
+}
