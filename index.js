@@ -15,14 +15,10 @@ corsAnywhere.createServer({}).listen(CORS_PROXY_PORT, () => {
 let app = express();
 // Register cache middleware for GET and OPTIONS verbs
 app.get('/', (req, res) => {
-    res.send(`
-    <body style='margin: 0'>
-    <div style='height: 100vh; width: 100%; background-color: darkgrey; display: flex; justify-content: center; align-items: center; flex-direction: column'>
-    <p style='font-size: 1.8rem;'>I tried explaining to my girlfriend what the effects of network packet loss were.</p>
-    <p style='font-size: 1.5rem'><em>But I just couldn't get the message across.</em></p>
-    </div>
-    </body>
-    `)
+    res.send({
+      code: 200,
+      message: "I tried explaining to my girlfriend the effects of network packet loss, but I couldn't get the message across."
+    })
 })
 app.get('/*', cacheMiddleware());
 app.options('/*', cacheMiddleware());
